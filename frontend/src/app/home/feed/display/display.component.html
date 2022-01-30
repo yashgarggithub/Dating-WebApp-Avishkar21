@@ -1,0 +1,73 @@
+<!-- <a
+  style="cursor: pointer;"
+  class="list-group-item clearfix"> 
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{user.first_name}}</h4>
+    <p class="list-group-item-text">{{user.last_name}}</p>
+  </div> -->
+<!-- <span class="pull-right">
+        <img
+          [src]="https://images.ctfassets.net/hrltx12pl8hq/7yQR5uJhwEkRfjwMFJ7bUK/dc52a0913e8ff8b5c276177890eb0129/offset_comp_772626-opt.jpg?fit=fill&w=800&h=300"
+          class="img-responsive"
+          style="max-height: 50px;">
+      </span> -->
+<!-- </a>                -->
+
+<body>
+    <div class="feed" *ngIf="user.gender == gender">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <div class="row">
+            <div class="col-xs-12">
+                <img [src]="image" alt="{{ user.first_name }}" class="img-responsive" style="max-height: 500px; max-width: 500px; margin-top: 50px;">
+
+            </div>
+
+        </div>
+        <!-- <a (click)="onsubmit()" class="fa fa-thumbs-up"
+    ng-disabled="buttonClicked"
+    style="max-width: 30px; max-height: 30px; margin-top: 10px;"></a> -->
+        <button (click)="onsubmit()" class="fa fa-thumbs-up" [disabled]="buttonClicked"></button>
+        <button (click)="ondislike()" class="fa fa-thumbs-down" [disabled]="buttonClicked"></button>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{user.first_name }}{{user.last_name}}</h1>
+                <h5>Age: {{user.age}} Sex: {{user.gender}} </h5>
+                <p>Bio: {{user.bio}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- <div
+        class="btn-group"
+        appDropdown> -->
+                <!-- <button
+          type="button"
+          class="btn btn-primary dropdown-toggle">
+          Manage Recipe <span class="caret"></span>
+        </button> -->
+                <!-- <ul class="dropdown-menu">
+          <li><a >To Shopping List</a></li>
+          <li><a style="cursor: pointer;">Edit Recipe</a></li>
+          <li><a style="cursor: pointer;">Delete Recipe</a></li>
+        </ul> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="row">
+            <!-- <div class="col-xs-12">
+            {{ user.bio }}
+        </div> -->
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="list-group">
+                    <!-- <li
+          class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient.name }} - {{ ingredient.amount }}
+        </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>

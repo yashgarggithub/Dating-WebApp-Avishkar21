@@ -1,0 +1,33 @@
+<!-- <div class="chat-messages">
+    <div class="chat-messages-show-container">
+      <ul class="chat-messages-show-list" id="message-list">
+      </ul>
+    </div>
+    <div class="chat-messages-create-container"> 
+      <input class="chat-messages-create-input" type="text" [(ngModel)]= "message">
+      <button  class="chat-messages-create-button" (click)="SendMessage()"> Send </button>
+    </div>
+ </div> -->
+<!-- <h5>Join a room</h5> -->
+<form action="/">
+  <label>Display name</label>
+  <input type="text" name="username" placeholder="Display name" required>
+  <label>Rooms Available</label>
+  <ul class="rooms-list">
+    <!-- {{#rooms}} -->
+    <!-- <app-display
+        *ngFor="let users of filteredUsers; let i = index"
+        [user]="users"
+        [index]="i"></app-display> -->
+    <!-- <li>
+                            <a *ngFor = "let room of rooms; let i= index">
+                             <li (click)= "onclick()">
+                               {{room}}
+                              </li> 
+                            </a>
+                            <input type="submit" name="room" id="room">
+                        </li>  -->
+    <app-rooms *ngFor="let room of rooms; let i = index" [room]="room" [index]="i"></app-rooms>
+    <!-- {{/rooms}} -->
+  </ul>
+</form>

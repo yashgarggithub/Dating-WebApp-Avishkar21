@@ -1,0 +1,57 @@
+<!-- <div class="row">
+    <div class="col-xs-12">
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active" >
+              <a routerLink="/profile" >{{email}}</a>
+            </li>
+          </ul>
+    </div>
+  </div>  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <ul class="nav navbar-nav" id="tab">
+                <li routerLinkActive="active">
+                    <!-- <a class="new" routerLink="/profile">Your Profile</a> -->
+
+                    <!-- <router-outlet></router-outlet> -->
+                    <div class="row">
+                        <h6 class="head">
+                            {{email}}
+                            <!-- <img src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png" width="50px" height="50px"> -->
+                        </h6>
+                    </div>
+                    <div class="row">
+                        <a routerLink="/profile">
+                            <img src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png" width="50px" height="50px">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a routerLink="/list">
+                            <img src="https://www.pngitem.com/pimgs/m/44-440504_message-heart-pink-overlay-tumblr-cute-kawaii-neon.png" width="50px" height="50px">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="https://op3it5lz221.typeform.com/to/ODYcM1u2">
+                            <img src="https://thumbs.dreamstime.com/b/feedback-button-simple-vector-illustration-pink-web-white-background-131250294.jpg" width="50px" height="50px">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+
+            </ul>
+
+        </div>
+        <!-- <div class="col-md-4">
+     <router-outlet></router-outlet>
+    </div> -->
+
+        <div class="col-md-7">
+
+
+            <app-feed></app-feed>
+        </div>
+    </div>
+</div>

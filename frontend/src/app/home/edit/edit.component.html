@@ -1,0 +1,42 @@
+<div id="bg">
+    <div class="module">
+        <ul>
+            <li class="tab activeTab"><img src="https://i.imgur.com/Fk1Urva.png" alt="" class="icon" /></li>
+            <!-- <li class="tab" ><img src="https://i.imgur.com/ZsRgIDD.png" alt="" class="icon"/></li>
+        <li class="tab" ><img src="https://i.imgur.com/34Q50wo.png" alt="" class="icon"/></li>
+        <li class="tab" ><img src="https://i.imgur.com/LCCJ06E.png" alt="" class="icon"/></li> -->
+        </ul>
+
+        <form #infoForm="ngForm" class="form" (ngSubmit)="onSubmit(infoForm)">
+            <!-- <form class = "form"> -->
+            <div class="form-group">
+                <label for="first_name"></label>
+                <input type="text" id="first_name" class="textbox" placeholder="First Name" ngModel name="first_name" required />
+            </div>
+            <!-- <input type="text" placeholder="First Name" class="textbox" /> -->
+            <div class="form-group">
+                <label for="last_name"></label>
+                <input type="text" id="last_name" class="textbox" placeholder="Last Name" ngModel name="last_name" required />
+            </div>
+            <!-- <input type="text" placeholder="Last Name" class="textbox" /> -->
+            <!-- <input type="text" placeholder="Email Address" class="textbox" /> -->
+            <div class="form-group">
+                <label for="phone"></label>
+                <input type="text" id="phone" class="textbox" placeholder="Phone Number" ngModel name="phone" required />
+            </div>
+            <div class="form-group">
+                <label for="age"></label>
+                <input type="number" id="age" class="textbox" placeholder="Age" ngModel name="age" required />
+            </div>
+            <h2>Gender</h2>
+            <input type="radio" name="gender" value="male" ngModel> Male<br>
+            <input type="radio" name="gender" value="female" required="required" ngModel> Female<br>
+            <div class="form-group">
+                <label for="bio"></label>
+                <input type="text" id="bio" class="textbox" placeholder="Bio" ngModel name="bio" required />
+            </div>
+            <!-- <input type="text" placeholder="Bio" class="textbox" /> -->
+            <button class="button buttonx" type="submit" [disabled]="!infoForm.valid">Submit</button>
+        </form>
+    </div>
+</div>

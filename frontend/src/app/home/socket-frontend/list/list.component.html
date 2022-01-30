@@ -1,0 +1,91 @@
+<h3>Showing People You Are Matched With</h3>
+<!-- *ngIf="showScreen" -->
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="user-list-card">
+                <div class="user-card" [ngClass]="room === selectedRoom && 'active'" *ngFor="let room of rooms" (click)="selectUserHandler(room)">
+
+                    <!-- <img [src]="user?.image" [alt]="user?.name" class="avatar" /> -->
+                    <p class="username">
+                        {{room.user2}}</p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-8">
+
+            <div class="chat-container">
+                <!-- *ngIf="selectedUser" -->
+                <ng-container>
+                    <div class="chat-header">
+
+                        <!-- <img [src]="selectedUser?.image" [alt]="selectedUser?.name" class="avatar" /> -->
+                        <h1 class="username">{{room}}</h1>
+
+                    </div>
+
+                    <div class="chat-body">
+
+                        <!-- [ngClass]='same-user' -->
+                        <div *ngFor="let item of messageArray" [ngClass]="item.user === user && 'same-user'">
+                            <a class="message-container" href="{{item.locationMessage}}" *ngIf="item.locationMessage">Link</a>
+                            <p class="message-container" *ngIf="item.message">{{item.message}}</p>
+                        </div>
+                    </div>
+
+                    <div class="chat-footer">
+
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-group mb-0">
+                                    <input type="text" placeholder="Type a message" class="form-control" [(ngModel)]="messageText" (keyup)="$event.keyCode === 13 && sendMessage()" *ngIf="isOpen" />
+                                </div>
+                            </div>
+                            <!-- (click)="sendMessage()" -->
+                            <div class="col-md-2 text-center align-self-center">
+                                <button class="btn btn-primary btn-sm px-3" (click)="sendMessage()" *ngIf="isOpen">Send</button>
+                                <button class="btn btn-primary btn-sm px-3" (click)="sendLocation()" *ngIf="isOpen">Nobody's at Home</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- 
+<ng-template #popup let-d="dismiss">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="form-group">
+                    <input type="number" placeholder="Enter your phone number" class="form-control"
+                        [(ngModel)]="phone" />
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" (click)="login(d)">Login</button>
+    </div>
+
+</ng-template> -->

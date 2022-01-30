@@ -1,0 +1,148 @@
+<div class = "row">
+    <div class = "col-xs-12 col-md-6 col-md-offset-3">
+        <div *ngIf = "isLoading"
+        style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner>
+        </div>
+    </div>
+</div>
+
+    <!-- <form #authForm = "ngForm"
+    (ngSubmit) = "onSubmit(authForm)"
+    *ngIf = "!isLoading">
+     <div class="form-group"> -->
+        <!-- <label for="email">E-Mail</label>
+        <input type="email" id="email" 
+        class="form-control" 
+        ngModel
+        name = "email"
+        required
+        email />
+      </div> -->
+      <!-- <div class="form-group"> -->
+        <!-- <label for="password">Password</label> -->
+        <!-- <input type="password"
+         id="password" 
+         class="form-control"
+         ngModel
+         name = "password"
+         required
+         minlength="6"
+          />
+      </div> -->
+
+    <!-- <div> -->
+        <!-- <button class = "btn btn-primary" type = "submit"
+        [disabled] = "!authForm.valid">{{isLoginMode ? 'Login': 'SignUp'}}</button>
+        <button class = "btn btn-primary"
+        (click) = "onSwitchMode()"
+        type = "button">Switch to {{isLoginMode ? 'Sign Up' : 'Login'}}</button> -->
+    <!-- </div>
+    </form>
+    </div> 
+</div> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class = "row">
+    <div class = "col-xs-12 col-md-6 col-md-offset-3">
+        <div *ngIf = "isLoading"
+        style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" #authForm = "ngForm"
+            (ngSubmit) = "onSubmit(authForm)"
+            *ngIf = "!isLoading">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="email" id="email"
+                    class="login__input" 
+                    class="form-control" 
+                    ngModel
+                    name = "email"
+                    required
+                    email 
+                    placeholder="Email">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password"
+                    id="password" 
+                    class="login__input"
+                    class="form-control"
+                    ngModel
+                    name = "password"
+                    required
+                    minlength="6"
+                    placeholder="Password">
+				</div>
+				<button class="button login__submit"type = "submit"
+                [disabled] = "!authForm.valid">
+					<span class="button__text">{{isLoginMode ? 'Login': 'SignUp'}}</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>
+                <button class = "buttonx"
+                    (click) = "onSwitchMode()"
+                        type = "button">Switch to {{isLoginMode ? 'Sign Up' : 'Login'}}</button> 
+        </form>
+
+                <!-- <button class="button login__submit"
+                click) = "onSwitchMode()"
+                        type = "button">
+					<span class="button__text">Switch to {{isLoginMode ? 'Sign Up' : 'Login'}}</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				 -->
+
+			<!-- <div class="social-login"> -->
+				<!-- <h3>log in via</h3>
+				<div class="social-icons"> -->
+					<!-- <a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+<!-- partial -->
+<!-- <h1>Welcome To GFG</h1>
+<p id="id1">
+  Default code has been loaded into the Editor.
+</p>
+<script>
+    document.getElementById("id1").innerHTML=
+    "Welcome to GeeksForGeeks"
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+    
+</body>
+</html> -->

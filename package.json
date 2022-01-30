@@ -1,0 +1,33 @@
+{
+  "name": "avishkar-2k21",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "boxen": "^4.0.0",
+    "chalk": "^2.4.2",
+    "cookie": "^0.4.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^9.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.1",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "socket.io": "^4.4.0",
+    "validator": "^13.7.0",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5"
+  }
+}

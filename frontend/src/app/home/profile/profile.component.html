@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Profile Page Design Example</title>
+
+    <meta name="author" content="Codeconvey" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+</head>
+
+<body>
+    <div class="ScriptTop">
+        <div class="rt-container">
+            <div class="col-rt-4" id="float-right">
+
+                <!-- Ad Here -->
+
+            </div>
+            <div class="col-rt-2">
+                <ul>
+                    <li><a routerLink="/home">Home</a></li>
+                    <li><a routerLink="/edit">Edit Profile</a></li>
+                    <li><a (click)="onlogout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <header class="ScriptHeader">
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="rt-heading">
+                    <h1>User Profile Information</h1>
+                    <!-- <p>A responsive profile page design.</p> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="rt-container">
+            <div class="col-rt-12">
+                <div class="Scriptcontent">
+
+                    <!-- Student Profile -->
+                    <div class="student-profile py-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="card shadow-sm">
+                                        <div class="card-header bg-transparent text-center">
+
+                                            <img class="profile_img" [src]="imageToShow" alt="student dp">
+
+                                            <h3>{{user.first_name}} {{user.last_name}}</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- <p class="mb-0"><strong class="pr-1">Student ID:</strong>321000001</p>
+            <p class="mb-0"><strong class="pr-1">Class:</strong>4</p> -->
+                                            <!-- <p class="mb-0"><strong class="pr-1">LifeLover</strong></p> -->
+                                            <!-- <form #photoform="ngForm" class="form" (ngSubmit)="onSubmit(photoform)">
+                                                <input type="file" id="photo" class="file-input" (change)="selectFile($event)" name="photo" ngModel required/>
+                                                <button class="button" type="submit" [disabled]="!photoform.valid">Submit</button>
+                                            </form> -->
+
+                                            <!-- <form>
+                                                <div>
+                                                    <input type="file" name="avatar" (change)="selectImage($event)" />
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <button type="submit" (click)="onSubmit()">Upload</button>
+                                                </div>
+                                            </form> -->
+                                            
+                                            
+                                            <!-- upload image -->
+                                            <label for="file">File:</label>
+                                            <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+                                            <button (click)="uploadImage()">Upload Image</button>
+                                            <!-- <h1> {{ downloadableURL }}</h1> -->
+                                            <!-- <div style="padding: 20mm">
+
+                                                <input type="file" name="file" (input)="onFileChanged($event)" accept=".jpeg,.jpg,.png,.svg" />
+                                                <br />
+
+                                                <img [src]="downloadableURL" onerror="this.onerror=null;this.src='assets/noimage.jpg';" width="300px" height="300px" />
+
+                                                <br /> {{ downloadableURL }}
+
+
+
+                                            </div> -->
+
+                                            <!-- 
+<div class="file-upload">
+
+   {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="upload-btn"
+      (click)="fileUpload.click()">
+        <mat-icon>attach_file</mat-icon>
+    </button>   
+</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="card shadow-sm">
+                                        <div class="card-header bg-transparent border-0">
+                                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+                                        </div>
+                                        <div class="card-body pt-0">
+                                            <table class="table table-bordered">
+                                                <!-- <tr>
+                <th width="30%">Roll</th>
+                <td width="2%">:</td>
+                <td>125</td>
+              </tr> -->
+                                                <tr>
+                                                    <th width="30%">Age </th>
+                                                    <td width="2%">:</td>
+                                                    <td>{{user.age}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="30%">Gender</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{{user.gender}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th width="30%">Phone No.</th>
+                                                    <td width="2%">:</td>
+                                                    <td>{{user.phone}}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div style="height: 26px"></div>
+                                    <div class="card shadow-sm">
+                                        <div class="card-header bg-transparent border-0">
+                                            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Bio</h3>
+                                        </div>
+                                        <div class="card-body pt-0">
+                                            <p>{{user.bio}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- partial -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Analytics -->
+
+</body>
+
+</html>

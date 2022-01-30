@@ -1,0 +1,32 @@
+-> install Node
+-> install Node Modules
+-> install npm packages
+-> install mongodb
+
+
+
+-> make app.js file which will be used to initialise server
+-> set up database connection in mongoose.js file
+-> make user schema in models
+-> make router user.js file
+
+
+
+-> Test on POSTMAN
+
+
+
+STARTING MAKING FRONTEND
+-> npm i -g @angular/cli @latest
+-> ng new folder_name --no-strict
+
+
+
+
+-> in app.component.html file <router-outlet></router-outlet> enables the use of various created routers
+-> initialise every service and component in app.module.ts file
+
+
+
+
+---> Use of AuthGuard in angular - if a user is not authenticated then by default it will redirect it to /auth page

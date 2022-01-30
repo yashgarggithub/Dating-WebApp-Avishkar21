@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(255, 80, 118);
+    /* overflow-y: visible; */
+    /* overflow-y: hidden */
+}
+
+.fa {
+    width: 70px;
+    height: 40px;
+    color: cornflowerblue;
+    background-color: white;
+}
+
+.feed {
+    height: 800px;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+}
+
+
+/* Optional: show position indicator in red */
+
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
